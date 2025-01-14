@@ -1,0 +1,6 @@
+{
+    "workbench.editorAssociations": {
+        "*.docx": "default",
+        "file:/**/*.xlsx": "jupyter-data-wrangler"
+    }
+}
