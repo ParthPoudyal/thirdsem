@@ -49,6 +49,6 @@ int main() {
 
     // Output the interpolated value
     cout << "The interpolated value at k = " << k << " is: " << f << endl;
-
+    cout << "Work done by Parth"; 
     return 0;
 }
