@@ -43,6 +43,6 @@ int main() {
 
     
     cout << "\nThe equation of the best-fit line is: y = " << a << " + " << b << "x" << endl;
-
+    cout << "done by Parth";
     return 0;
 }
