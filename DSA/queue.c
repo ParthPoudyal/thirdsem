@@ -66,6 +66,7 @@ int main(){
     enqueue (ptr, 2);
     enqueue (ptr, 5);
     dequeue(ptr);
-    isempty(ptr); 
+    dequeue(ptr);
+    dequeue(ptr);
     return 0;  
 }

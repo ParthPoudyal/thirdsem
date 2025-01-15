@@ -8,13 +8,13 @@
 int top = -1;
 char stack[MAX];
 
-// checking if stack is full
+
 int isFull ()
 {
   return top == MAX - 1;
 }
 
-// checking is stack is empty
+
 int isEmpty ()
 {
   return top == -1;
@@ -28,17 +28,17 @@ void push (char item)
   stack[top] = item;
 }
 
-// Function to remove an item from stack.  It decreases top by 1 
+
 int pop ()
 {
   if (isEmpty ())
     return INT_MIN;
 
-  // decrements top and returns what has been popped      
+     
   return stack[top--];
 }
 
-// Function to return the top from stack without removing it 
+
 int peek ()
 {
   if (isEmpty ())
@@ -46,14 +46,13 @@ int peek ()
   return stack[top];
 }
 
-// A utility function to check if the given character is operand 
+ 
 int checkIfOperand (char ch)
 {
   return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z');
 }
 
-// Fucntion to compare precedence
-// If we return larger value means higher precedence 
+
 int precedence (char ch)
 {
   switch (ch)
@@ -72,7 +71,7 @@ int precedence (char ch)
   return -1;
 }
 
-// The driver function for infix to postfix conversion 
+
 int getPostfix (char *expression)
 {
   int i, j;
@@ -91,11 +90,11 @@ int getPostfix (char *expression)
 	  while (!isEmpty (stack) && peek (stack) != '(')
 	    expression[++j] = pop (stack);
 	  if (!isEmpty (stack) && peek (stack) != '(')
-	    return -1;		// invalid expression              
+	    return -1;		             
 	  else
 	    pop (stack);
 	}
-      else			// if an opertor
+      else			
 	{
 	  while (!isEmpty (stack)
 		 && precedence (expression[i]) <= precedence (peek (stack)  ))
@@ -104,9 +103,6 @@ int getPostfix (char *expression)
 	}
 
     }
-
-  // Once all inital expression characters are traversed
-  // adding all left elements from stack to exp
   while (!isEmpty (stack))
     expression[++j] = pop (stack);
 
@@ -148,14 +144,11 @@ void InfixtoPrefix (char *exp)
 {
 
   int size = strlen (exp);
-
-  // reverse string
   reverse (exp);
-  //change brackets
   brackets (exp);
-  //get postfix
+
   getPostfix (exp);
-  // reverse string again
+
   reverse (exp);
 }
 
@@ -165,7 +158,6 @@ int main ()
 
   char expression[] = "((a/b)+c)-(d+(e*f))";
   printf ("%s\n", expression);
-//InfixtoPrefix (expression);   //for Prefix covnversion.
   getPostfix(expression); 
   printf ("The postfix is: ");
   printf ("%s\n", expression);
