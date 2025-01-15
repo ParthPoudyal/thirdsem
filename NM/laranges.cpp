@@ -35,7 +35,7 @@ int main() {
     // Display the result
     cout << fixed << setprecision(4);  
     cout << "The interpolated value at xp = " << xp << " is yp = " << yp << endl;
-    cout << "Done by Parth 😀\n";
+    cout << "Done by Parth \n";
 
     return 0;
 }
