@@ -69,5 +69,4 @@ int main(){
     dequeue(ptr);
     dequeue(ptr);
     return 0;  
-    print ('HELLOOOO!'); 
 }
