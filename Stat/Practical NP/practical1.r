@@ -1,0 +1,6 @@
+install.packages("tseries")
+library(tseries)
+outcomes <-  c("H","H","T","H","T","H","H","T","T","H","T","H","H","T","T","H","H","H","T","H","T","H","H","T","T","H","T","T","T","H")
+data_factor <- factor(outcomes, levels= c("H","T"),labels =c(1,0))
+run_test_result <- run.test(data_factor)
+print (run_test_result)
