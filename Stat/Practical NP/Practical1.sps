@@ -1,0 +1,11 @@
+﻿* Encoding: UTF-8.
+For Question no 1.
+
+DATASET ACTIVATE DataSet0.
+NPAR TESTS
+  /BINOMIAL (0.50)=Outcome
+  /MISSING ANALYSIS.
+
+NPAR TESTS
+  /RUNS(MEDIAN)=Outcome
+  /MISSING ANALYSIS.

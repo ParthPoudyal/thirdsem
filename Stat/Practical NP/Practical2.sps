@@ -1,0 +1,16 @@
+﻿* Encoding: UTF-8.
+to test the samples are taken in random order.
+DATASET ACTIVATE DataSet0.
+NPAR TESTS
+  /RUNS(MEDIAN)=Marks
+  /MISSING ANALYSIS.
+
+NPAR TESTS
+  /CHISQUARE=Marks
+  /EXPECTED=EQUAL
+  /MISSING ANALYSIS.
+
+NPAR TESTS
+  /K-S(UNIFORM)=Marks
+  /MISSING ANALYSIS
+  /KS_SIM CIN(99) SAMPLES(10000).
