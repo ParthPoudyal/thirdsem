@@ -1,17 +1,17 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+user_1 = {
+    "name": "Parth", 
+    "age" : "hello", 
+    "school" : "pathshala"
+}
+user_2 = {
+    "name": "Parth", 
+    "age" : "hello", 
+    "favourite" : "apple"
+}
 
-driver_path = "chromedriver-win64\chromedriver-win64\chromedriver.exe"
+print (user_1.keys())
+print (user_2.keys())
 
-service = Service(driver_path)
-driver = webdriver.Chrome(service=service)
-
-url = driver.get("https://www.geeksforgeeks.org")
-
-driver.get (url)
-
-get_url = driver.current_url
-
-print (get_url)
-
-input ("press enter to exit")
+for items in user_1,user_2: 
+    if (not(items in (user_1 and user_2))): 
+        print (items)
