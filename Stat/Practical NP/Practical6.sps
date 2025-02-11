@@ -1,0 +1,5 @@
+﻿* Encoding: UTF-8.
+
+NPAR TESTS
+  /COCHRAN=D1 D2 D3 D4
+  /MISSING LISTWISE.
